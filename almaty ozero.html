@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Destination</title>
+    <!-- Подключение Bootstrap 5.3.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="assets/css/almaty_ozero_css.css">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body class="bg-dark text-light dark-mode">
+
+<header class="d-flex justify-content-between align-items-center p-3 bg-black text-white">
+    <div class="logo d-flex align-items-center">
+        <img alt="mountain.png" src="assets/img/mountain.png" width="50" height="50" class="me-2">
+        <h1 class="m-0">Tour Kazakh</h1>
+    </div>
+    <nav>
+        <ul class="list-unstyled d-flex gap-3 m-0">
+            <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+            
+        </ul>
+    </nav>
+</header>
+
+<section class="hero position-relative text-center text-white d-flex align-items-center justify-content-center" style="height: 100vh; background-image: url('assets/img/almatyozeen.png'); background-size: cover; background-position: center;">
+    <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-black opacity-75"></div>
+    <div class="position-relative z-2">
+        
+        <h2 class="text-uppercase fw-bold" style="font-size: 72px; color: #fff; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);">KAZAKHSTAN</h2>
+        
+        <hr class="mx-auto" style="width: 80px; height: 5px; background-color: #fff;">
+        
+        <h3 class="fw-bold mt-4" style="font-size: 36px; color: #fff; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);">Almaty Ozero tour</h3>
+    </div>
+</section>
+
+<section class="tour-section container py-5">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="row g-3">
+                <div class="col-6">
+                    <img alt="aktau1.jpeg" src="assets/img/almaty 2.jpg" class="img-fluid rounded" alt="Image 1">
+                </div>
+                <div class="col-6">
+                    <img alt="aktau2.jpeg" src="assets/img/almaty 3.jpg" class="img-fluid rounded" alt="Image 2">
+                </div>
+                <div class="col-6">
+                    <img alt="aktau3.jpg" src="assets/img/almaty 4.jpg" class="img-fluid rounded" alt="Image 3">
+                </div>
+                <div class="col-6">
+                    <img alt="aktau4.jpg" src="assets/img/almaty 5.jpg" class="img-fluid rounded" alt="Image 4">
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <h2>Almaty Ozero tour</h2>
+            <hr class="my-2">
+            <p>Almaty Ozero Tour offers an incredible journey to one of Kazakhstan’s most picturesque lakes. Nestled in the mountains, the lake is famous for its crystal-clear waters, surrounded by majestic peaks and lush forests. This tour provides visitors with breathtaking views of nature, opportunities for hiking, photography, and relaxation by the serene waters. </p>
+            <div class="btn-group" role="group" aria-label="Tour actions">
+                <a href="tury.html" class="btn btn-primary">See other tours</a>
+                <a href="book_a_tour.html" class="btn btn-outline-info">Order</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+
+    <h2 class="h2 mt-5 d-flex justify-content-center">Rating Example</h2>
+    <div class="rating mt-5">
+        <span class="star mx-2" data-value="1">★</span>
+        <span class="star mx-2" data-value="2">★</span>
+        <span class="star mx-2" data-value="3">★</span>
+        <span class="star mx-2" data-value="4">★</span>
+        <span class="star mx-2" data-value="5">★</span>
+    </div>
+
+    <h2 class="h2 mt-5" style="display: flex; justify-content: center;">Read More Example</h2>
+    <div style="display: flex; justify-content: center;">
+        <p id="moreText" style="display:none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, facilis vero hic nemo cupiditate incidunt dignissimos reiciendis voluptates modi nostrum necessitatibus culpa ipsa maxime repellendus recusandae beatae magnam illo? Fuga.</p>
+        <button id="readMoreBtn">Read More</button>
+    </div>
+
+<!--footer-->
+<section class="footer bg-black text-center py-3">
+    <span class="text-white">Created By Nursaya, Goha, Madina | 2024 All rights reserved.</span>
+</section>
+<!--footer-->
+<script src="each_tour.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Events</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/tury.css">
+</head>
+<body>
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/img/mountain.png" alt="Mountain Logo" width="50" height="50">
+                        <h1>Tour Kazakh</h1>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex justify-content-end align-items-center">
+                <button class="theme-toggle" id="theme-switch">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="section-title">Upcoming Events</h2>
+                <button class="change-season-btn">Change season events</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="event-section container-fluid">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="event-card">
+                    <div class="event-details">
+                        <img src="assets/img/almatyozeen.png" alt="Almaty Ozero">
+                        <h3>Almaty Ozero</h3>
+                        <p>Embark on the ultimate adventure to witness the majestic ozero Almaty, the most beautiful place in the world...</p>
+                        <a href="almaty ozero.html" class="details-btn">All Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="event-card">
+                    <div class="event-details">
+                        <img src="assets/img/aktau.jpg" alt="Aktau Tour">
+                        <h3>Aktau Tour</h3>
+                        <p>We invite you on a tour of Aktau, located on the shores of the Caspian Sea. You will visit the city's main attractions...</p>
+                        <a href="aktau.html" class="details-btn">All Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="event-card">
+                    <div class="event-details">
+                        <img src="assets/img/borovoe.jpg" alt="Borovoe Tour">
+                        <h3>Borovoe Tour</h3>
+                        <p>The tour to Burabay is an exciting 2-day journey that begins with an early departure from Astana and arrival at the national park...</p>
+                        <a href="borovoe.html" class="details-btn">All Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <span>Created By Nursaya, Gaukharbek, Madina | 2024 All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const themeSwitch = document.getElementById('theme-switch');
+        themeSwitch.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            themeSwitch.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙'; // Change icon based on theme
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <title>Tur-Kazak</title>
+    <title>FAQ Accordion</title>
+</head>
+<body>
+    
+    <nav class="navbar justify-content-between navbar-expand-lg">
+        
+        
+            <a class="navbar-brand d-flex" href="index.html">
+                <img alt="mountain.png" width="50px" height="50px" src="assets/img/mountain.png" class="d-inline-block align-text-center">
+                <h1>Tour-Kazak</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="menu collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="nav nav-links ">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#events">Events</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="tury.html">Tours</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#explore">Comments</a>
+                    </li>
+                    <li class="nav-item" id="auth-buttons">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                    </li>
+                    <li class="nav-item" id="logoutBtn" style="display: none;">
+                        <a class="nav-link" href="#" onclick="logout()">Logout</a>
+                    </li>                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#subscribeModal">Contact</a>
+                    </li>
+                    <li>
+                        <label class ="switch">
+                            <input type ="checkbox" id="toggle-mode">
+                            <span class="slider round"></span>
+                        </label>
+
+                    </li>
+                    
+                </ul>
+            </div>
+        
+    </nav>
+    <header id="home" class="container-fluid align-items-center justify-content-center d-flex">
+        <div class="container ">
+            <div class="row align-items-center header-content">
+                <div class="col-12 justify-content-center">
+                    <h2 id="quote" class="gradient-text">Explore the colorful world</h2>
+                </div>
+                <div class="col-12 justify-content-center">
+                    <div class="line"></div>
+                </div>
+                <div class="col-12">
+                    <h1>A WONDERFUL GIFT</h1>
+                    
+                </div>
+                <div class="col-12 text-center mt-3">
+                    <h5 id="display-time" class="text-white"></h5> <!-- Область для отображения времени -->
+                </div>
+                <div class="col-12 text-center mt-3">
+                    <button id="show-time-btn" class="btn btn-primary">Show time</button> <!-- Кнопка для показа времени -->
+                </div> 
+                <div class="col-12 text-center mt-3">
+                    <h5 id="display-greeting" class="text-white"></h5> <!-- Область для отображения приветствия -->
+                </div>
+                <div class="col-12 justify-content-center">
+                    <a href="tury.html" class="ctn">Learn more</a>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+    
+    <!--Events-->
+    
+    <section class="events" id="events">
+        <div class="container">
+            <div class="title">
+                <h1 class="dark">Upcoming Events</h1>
+                <div class="line"></div>
+            </div>
+            <div class="row">
+                <div class="card-group">
+                    <div class="card text-center" style="width: 18rem;">
+                        <img src="assets/img/carousel-img2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body ">
+                        <h5 class="card-title ">Everest camp trek</h5>
+                        <p class="card-text">Everest base camp trek is without a doubt, one of
+                            the most renowned travel destinations in the world.</p>
+                            <button type="button" class="btn btn-danger btn-lg" onclick="document.location='book_a_tour.html'">Order</button>
+                        </div>    
+                    </div>
+                    <div class="card text-center" style="width: 18rem;">
+                        <img src="assets/img/carousel-img3.jpg" class="card-img-top" alt="...">
+                        <div class="card-body ">
+                        <h5 class="card-title ">Everest camp trek</h5>
+                        <p class="card-text">Everest base camp trek is without a doubt, one of
+                            the most renowned travel destinations in the world.</p>
+                            <button type="button" class="btn btn-danger btn-lg" onclick="document.location='book_a_tour.html'">Order</button>
+                        </div>    
+                    </div>
+                    <div class="card text-center" style="width: 18rem;">
+                        <img src="assets/img/carousel-img4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body ">
+                        <h5 class="card-title ">Everest camp trek</h5>
+                        <p class="card-text">Everest base camp trek is without a doubt, one of
+                            the most renowned travel destinations in the world.</p>
+                            <button type="button" class="btn btn-danger btn-lg" onclick="document.location='book_a_tour.html'">Order</button>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--Events-->
+    <!-- About -->
+     
+    <section id="about">
+        <div class="title">
+            <h1 class="font-color">About Us</h1>
+                <div class="line"></div>    
+        </div>
+        <div id="about_us">    
+            <div class="container">  
+                <div class="row justify-content-center py-5">
+                    <div class="col-8">
+                        <div id="carouselExampleIndicators" class="carousel slide">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner ">
+                              <div class="carousel-item active">
+                                <img src="assets/img/img4.png" class=" w-100 img-fluid" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="assets/img/img5.png" class=" w-100 img-fluid" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="assets/img/img6.png" class=" w-100 img-fluid" alt="...">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+     
+        <!--faq-->
+        <section>
+            <h2 class="title">FAQs</h2>
+            <div class="faq">
+                <div class="question" onclick="toggleAnswer(0)">
+                    <h3>What are the available tours?</h3>
+                    <svg width="15" height="10" viewbox="0 0 42 25">
+                        <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div class="answer" id="answer-0">
+                    <p>We offer various tours ranging from mountain expeditions to cultural excursions.</p>
+                </div>
+            </div>
+        
+            <div class="faq">
+                <div class="question" onclick="toggleAnswer(1)">
+                    <h3>How can I book a tour?</h3>
+                    <svg width="15" height="10" viewbox="0 0 42 25">
+                        <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div class="answer" id="answer-1">
+                    <p>You can book a tour through our website by visiting the "Tours" section and selecting your desired package.</p>
+                </div>
+            </div>
+        
+            <div class="faq">
+                <div class="question" onclick="toggleAnswer(2)">
+                    <h3>What is the cancellation policy?</h3>
+                    <svg width="15" height="10" viewbox="0 0 42 25">
+                        <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div class="answer" id="answer-2">
+                    <p>Cancellations made 48 hours prior to the tour are fully refundable. After that, a cancellation fee applies.</p>
+                </div>
+            </div>
+        </section>
+
+
+<!-- window -->
+<div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="subscribeModalLabel">Subscribe to Our Newsletter</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="subscriptionForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" form="subscriptionForm">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm" onsubmit="event.preventDefault(); login();">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Элемент для отображения приветствия -->
+<div id="greeting" class="text-center"></div>
+
+        
+    <!--footer-->
+    <section class="footer">
+        <span
+            >Created By Nursaya, Gaukharbek,  Madina | 2024 All rights
+            reserved.</span
+        >
+        
+    </section>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src ="script.js"></script>
+    <script src = "localstorage.js"></script>
+    <script src = "each_tour.js"></script>
+
+</body>
+</html>
