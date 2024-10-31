@@ -1,51 +1,41 @@
-// Функция для входа
 function login() {
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
 
-    // Простая проверка (можно добавить дополнительную логику аутентификации)
+    
     if (username && password) {
-        // Сохранение информации о пользователе в локальном хранилище
-        localStorage.setItem('username', username);
-        localStorage.setItem('password', password); // Сохранение пароля
-        updateUI();
-        
-        // Закрытие модального окна
-        $('#loginModal').modal('hide'); // Используем jQuery для закрытия
+        //SAVE IN LS
+        localStorage.setItem("loggedInUser", JSON.stringify({ username,password }));
+
+        document.getElementById("auth-buttons").style.display = "none";
+        document.getElementById("logoutBtn").style.display = "block";
+        document.getElementById("greeting").innerText = `Hello, ${username}!`;
+
+        // close mw
+        const loginModal = document.getElementById("loginModal");
+        const modalInstance = bootstrap.Modal.getInstance(loginModal);
+        modalInstance.hide();
     } else {
-        alert('Please enter both username and password');
+        alert("Please fill in both fields.");
     }
 }
 
-// Функция для выхода
 function logout() {
-    // Удаление информации о пользователе из локального хранилища
-    localStorage.removeItem('username');
-    localStorage.removeItem('password'); // Удаление пароля
-    updateUI();
+    //delete 
+    localStorage.removeItem("loggedInUser");
+
+    // update
+    document.getElementById("auth-buttons").style.display = "block";
+    document.getElementById("logoutBtn").style.display = "none";
+    document.getElementById("greeting").innerText = "";
 }
 
-// Функция для обновления интерфейса в зависимости от состояния аутентификации
-function updateUI() {
-    const username = localStorage.getItem('username');
-    const authButtons = document.getElementById('auth-buttons');
-    const logoutBtn = document.getElementById('logoutBtn');
-
-    if (username) {
-        authButtons.style.display = 'none'; // Скрыть кнопку входа
-        logoutBtn.style.display = 'block'; // Показать кнопку выхода
-    } else {
-        authButtons.style.display = 'block'; // Показать кнопку входа
-        logoutBtn.style.display = 'none'; // Скрыть кнопку выхода
+// check user sign in
+document.addEventListener("DOMContentLoaded", function () {
+    const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+    if (loggedInUser) {
+        document.getElementById("auth-buttons").style.display = "none";
+        document.getElementById("logoutBtn").style.display = "block";
+        document.getElementById("greeting").innerText = `Hello, ${loggedInUser.username}!`;
     }
-
-  
-
-
-// Функция для инициализации состояния при загрузке страницы
-function init() {
-    updateUI();
-}
-
-// Вызываем инициализацию при загрузке страницы
-window.onload = init;
+});
